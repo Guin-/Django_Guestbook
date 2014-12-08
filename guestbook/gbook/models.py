@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 # Create your models here.
 
@@ -14,9 +15,24 @@ class GuestbookEntry(models.Model):
 	comment = models.TextField(max_length=500)
 	#EmailField verifies that it is an email, blank allows it to be optional
 	user_email = models.EmailField(max_length=75, blank = True)
+	timestamp - models.DateTimeField(auto_now_add = True)
+
+	def __unicode__(self):
+		return ' '.join([
+			self.username,
+			self.comment,
+			self.user_email,
+		])
+'''class EntryForm(forms.ModelForm):
+	class Meta:
+		model = GuestbookEntry
+		fields = ('username', 'comment', 'user_email',)
 
 
-
+model_form = EntryForm()
+model_form = EntryForm(
+	instance = GuestbookEntry.objects.get()
+)'''
 
 
 
