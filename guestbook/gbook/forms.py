@@ -1,8 +1,11 @@
-from django import forms
-from gbook import models
-
-class EntryForm(forms.ModelForm):
+from django.db import models
+from django.forms import ModelForm
+from gbook.models import GuestbookEntry
+ 
+class EntryForm(ModelForm):
 	class Meta:
-		model = GuestbookEntry
+		model = GuestbookEntry  
+		fields = ['username', 'comment', 'user_email']
+
 
 

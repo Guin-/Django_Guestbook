@@ -6,14 +6,16 @@
 <body>
 	<h1>Guin's Guestbook</h1>
 <br>
+{% block content %}
 	<h2> Entry Form </h2>
 
-		<form method = "POST">>
+		<form method = "POST"> {% csrf_token %}
 			<ul>
 			{{ EntryForm.as_ul }}	
 			</ul>
+			<button type="submit"> Submit </button>
 		</form>
-
+{% end block content %}
 
 <h2> Entries </h2>
 
