@@ -11,14 +11,13 @@
 
 		<form method = "POST"> {% csrf_token %}
 			<ul>
-			{{ EntryForm.as_ul }}	
+			{{ form.as_p }}	
 			</ul>
 			<button type="submit"> Submit </button>
 		</form>
-{% end block content %}
+{% endblock content %}
 
 <h2> Entries </h2>
-
 
 </body>
 </html>
