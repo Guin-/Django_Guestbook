@@ -1,0 +1,29 @@
+/* Base styling for Guestbook Index page */
+
+body {
+	background-color: black;
+	color: #5dbaff
+	}
+
+h1 {
+	color: #5dbaff
+}
+
+h2 {
+	color: #5dbaff
+}
+
+p {
+	color: #5dbaff
+}
+
+.container {
+	text-align: center;
+}
+
+#form {
+	margin: 0 auto;
+	text-align: left;
+	width: 40%; 
+
+}

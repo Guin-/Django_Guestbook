@@ -1,11 +1,20 @@
+
 <html>
 <head>
+
+{% load staticfiles %}
+<link rel="stylesheet" type = "text/css" href=" {% static 'gbook/style.css' %}"/>
 <title> Guin's Guestbook </title>
 </head>
 
 <body>
+
+<div id = "header" class = "container">
 	<h1>Guin's Guestbook</h1>
 <br>
+</div>
+
+<div id= "form" class = "container">
 {% block content %}
 	<h2> Entry Form </h2>
 
@@ -16,8 +25,11 @@
 			<button type="submit"> Submit </button>
 		</form>
 {% endblock content %}
+</div>
 
+<div id= "entries" class = "container">
 <h2> Entries </h2>
+</div>
 
 </body>
 </html>
