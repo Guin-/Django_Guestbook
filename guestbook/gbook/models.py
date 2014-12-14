@@ -9,7 +9,7 @@ class GuestbookEntry(models.Model):
 	timestamp = models.DateTimeField(auto_now_add = True, default = datetime.datetime.now)
 
 	def __unicode__(self):
-		return ' '.join([
+		return ' ---- '.join([
 			self.username,
 			self.comment,
 			self.user_email,

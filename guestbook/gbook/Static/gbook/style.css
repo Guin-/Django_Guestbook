@@ -27,3 +27,10 @@ p {
 	width: 40%; 
 
 }
+
+#entries {
+	margin: 0 auto;
+	text-align: left;
+	width: 40%;
+	
+}

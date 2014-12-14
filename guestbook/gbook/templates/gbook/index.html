@@ -16,7 +16,7 @@
 
 <div id= "form" class = "container">
 {% block content %}
-	<h2> Entry Form </h2>
+	<h2> Leave some love: </h2>
 
 		<form method = "POST"> {% csrf_token %}
 			<ul>
@@ -28,7 +28,9 @@
 </div>
 
 <div id= "entries" class = "container">
-<h2> Entries </h2>
+<h2> Read some love: </h2>
+{{ entry }}
+{{ entries }}
 </div>
 
 </body>
