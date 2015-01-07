@@ -29,8 +29,11 @@
 
 <div id= "entries" class = "container">
 <h2> Read some love: </h2>
-{{ entry }}
-{{ entries }}
+
+{% for entry in previous_entries %}
+	{{ entry }}</br>
+{% endfor %}
+
 </div>
 
 </body>

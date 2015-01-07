@@ -12,29 +12,73 @@ import datetime
 
 
 def index(request):
+	previous_entries = GuestbookEntry.objects.all().reverse()
 	if request.method == "POST":
 		form = EntryForm(request.POST)
 		if form.is_valid():
 			f_instance = form.save()
-			entry = GuestbookEntry.__unicode__(f_instance)		
-		#	return render(request, 'gbook/index.html',
-		#				 {'entry': entry, 
-		#				  'form': form})
-			#model_instance.timestamp = timestamp
-			#model_instance.save()
+
 		return render(request, 'gbook/index.html', {'form': form,
-							'entry': entry})
+						'previous_entries': previous_entries})
 	else:
-		form = EntryForm()
-#		entries = GuestbookEntry.__unicode__(self)
-		entries = GuestbookEntry.objects.all()
-		return render(request, 'gbook/index.html', {'form':form,
-							'entries': entries})
+		form = EntryForm(request.GET)
+	return render(request, 'gbook/index.html', {'form': form,
+						'previous_entries': previous_entries})
+	#return render(request, 'gbook/index.html', {'form': form})
+'''
+def entry_pages(request):
+	entry_list = GuestbookEntry.objects.all().reverse()
+	paginator = Paginator(entry_list, 10)
+
+	page = request.GET.get('page')
+	try:
+		entries = paginator.page(page)
+	except PageNotAnInteger:
+		entries = paginator.page(1)
+	except EmptyPage:
+		contacts = paginator.page(paginator.num_pages)
+	return render(request, 'gbook/index.html', {'entries': entries})
+		
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#		form = EntryForm()
+#		entries = GuestbookEntry.__unicode__()
+#		entries = form(instance = GuestbookEntry.objects.all().reverse())
+#		return render(request, 'gbook/index.html', {'form':form})
+#							'entries': entries})
+'''
+def entries(request):
+	if request.method == "GET":
+		form = EntryForm(request.GET)
+		saved = GuestbookEntry.objects.all().reverse()
+		saved_entries = GuestbookEntry.__unicode__(saved)		
+		return render(request, 'gbook/index.html', {'form': form,
+							 'saved_entries': saved_entries})
+
+
+
+
+
+
+
 
 
 
 # Form shows up. Fill out. Submit. Form returned with fields filled in. 	
-'''
+
 def index(request):
 	if request.method == "POST":
 		form = EntryForm(request.POST)
