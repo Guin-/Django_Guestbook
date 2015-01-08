@@ -15,4 +15,8 @@ class GuestbookEntry(models.Model):
 			self.comment,
 			self.user_email,
 		])
+'''
+	def order(self):
+		return self.timestamp
+'''
 

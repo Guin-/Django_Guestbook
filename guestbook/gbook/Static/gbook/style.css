@@ -2,35 +2,35 @@
 
 body {
 	background-color: black;
-	color: #5dbaff
+	color: #2c003a;
 	}
 
 h1 {
-	color: #5dbaff
+	color: #2c003a;
 }
 
 h2 {
-	color: #5dbaff
+	color: #2c003a;
 }
 
 p {
-	color: #5dbaff
+	color: #2c003a;
+}
+
+
+.header {
+	text-align: center;
+	background: #383838
 }
 
 .container {
 	text-align: center;
-}
-
-#form {
 	margin: 0 auto;
 	text-align: left;
 	width: 40%; 
-
+	background: #383838;
 }
 
-#entries {
-	margin: 0 auto;
-	text-align: left;
-	width: 40%;
+
 	
 }

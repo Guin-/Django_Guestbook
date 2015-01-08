@@ -8,4 +8,3 @@ class EntryForm(ModelForm):
 		fields = ['username', 'comment', 'user_email']
 
 
-
