@@ -1,14 +1,16 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 
 {% load staticfiles %}
+
+<link rel="stylesheet" type = "text/css" href=" {% static 'gbook/css/normalize.css' %}"/>
 <link rel="stylesheet" type = "text/css" href=" {% static 'gbook/style.css' %}"/>
 <title> Guin's Guestbook </title>
 </head>
 
 <body>
-
+<div class = "content-box">
 <div class = "header">
 	<h1>Guin's Guestbook</h1>
 <br>
@@ -49,10 +51,12 @@
 		{% endif %}
 	</span>	
 </div>
-
-
 </div>
 
+<footer> 
+&copy; 2015 Guin's Guestbook
+</footer>
+</div> <! content box >
 </body>
 </html>
 

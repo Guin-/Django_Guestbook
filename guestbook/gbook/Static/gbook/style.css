@@ -1,11 +1,15 @@
 /* Base styling for Guestbook Index page */
 
+
+
+
 body {
-	background-color: black;
-	color: #2c003a;
+	background-color: #1e2e4d;
+    color: #2c003a;
 	}
 
 h1 {
+    margin: 0 auto;
 	color: #2c003a;
 }
 
@@ -18,10 +22,24 @@ p {
 }
 
 
+footer {
+    background: #383838;    
+    padding: 20px;
+    margin-top: 20px;
+    }
+
 .header {
 	text-align: center;
-	background: #383838
+	background: #383838;
 }
+
+.content-box {
+    margin: 0 auto;
+    width: 70%;
+    background: #000d11;
+    padding-bottom: 30px;
+ }
+
 
 .container {
 	text-align: center;
@@ -29,6 +47,7 @@ p {
 	text-align: left;
 	width: 40%; 
 	background: #383838;
+    padding-bottom: 20px;
 }
 
 
